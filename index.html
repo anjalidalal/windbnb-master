@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css">
-    <title>WINDBNB-MASTER</title>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="main">
-      <div class="upper">
-        <img src="./logo.svg" alt="">
-        <div class="header">
-         <input type="text" id="location" placeholder="">
-         <div></div>
-         <input type="text" id="guest" placeholder="">
-         <div></div>
-         <button><img src="./icons8-search-30.png" alt=""></button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Mulish:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>WINDBNB-MASTER</title>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <!-- <div class="upper">
+      <img src="./logo.svg" alt="">
+      <div class="header">
+        <input type="text" id="location" placeholder="" onclick="searchLocation()">
+        <div></div>
+        <input type="text" id="guest" placeholder="">
+        <div></div>
+        <button><img src="./icons8-search-30.png" alt=""></button>
+      </div>
+    </div> -->
+    <div class="upper">
+      <div class="header">
+        <div class="first">
+          <label>LOCATION</label>
+          <input type="text" id="location" placeholder="Add location" onclick="searchLocation()">
         </div>
+        <div class="lines"></div>
+        <div class="first">
+          <label>GUESTS</label>
+          <input type="text" id="guest" placeholder="Add guests">
+        </div>
+        <div class="lines"></div>
+        <div class="second">
+        <button><img src="./icons8-search-31.png" alt="">Search</button>
       </div>
-      <div class="stays">
-        <h1>Stays in Finland</h1>
-        <p>12+ stays</p>
-      </div>
-      <div id="bedrooms">
-        
       </div>
     </div>
-  
-    <script src="./space.js"></script>
-  </body>
+    <div class="stays">
+      <h1>Stays in Finland</h1>
+      <p>12+ stays</p>
+    </div>
+    <div id="bedrooms">
+
+    </div>
+  </div>
+
+  <script src="./space.js"></script>
+</body>
+
 </html>

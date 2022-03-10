@@ -164,6 +164,7 @@ console.log(data)
 
 function showData() {
   let datadiv = document.getElementById("bedrooms")
+  let location = document.getElementById("location")
   data.forEach(function (items) {
     console.log(items.type);
 
@@ -182,10 +183,11 @@ function showData() {
     subDiv.setAttribute("class", "subDiv")
 
     //superhost in subDiv
-    let button = document.createElement("div");
     if (items.superHost === true) {
-       button.textContent = "SUPER HOST"
-       button.setAttribute("class", "superHost")
+      let p = document.createElement("div");
+       p.textContent = "SUPER HOST"
+       p.setAttribute("class", "superHost")
+       subDiv.appendChild(p)
     }
 
     //type in subDiv
@@ -206,7 +208,7 @@ function showData() {
     rating.setAttribute("class", "star")
 
     //all the details appended into subDiv
-    subDiv.append(button, type, bed, rating);
+    subDiv.append(type, bed, rating);
 
     //title of the main div
     let title = document.createElement("div");
@@ -218,7 +220,14 @@ function showData() {
 
     //the main div appended to datadiv in html page
     datadiv.append(div)
+
+
   });
 
 }
+
+// function searchLocation(){
+//   let div = document.createElement("div");
+  
+// }
 showData()
