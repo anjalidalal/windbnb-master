@@ -335,4 +335,22 @@ input:focus {
     font-size: 16px;
     line-height: 20px;
   }
+  #content-1{
+    background-color: #33333300;
+    width: 252px;
+    height: 270px;
+    padding: 0px 20px;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+  }
+  .content-2{
+    background-color: #33333300;
+    width: 252px;
+    height: 270px;
+    padding: 20px;
+    position: absolute;
+    top: 65px;
+    left: 255px;
+  }
 }

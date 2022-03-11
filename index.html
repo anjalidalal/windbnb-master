@@ -39,17 +39,19 @@
     <div class="upper">
       <div class="edit">
         <p>Edit your search</p>
-        <img src="./icons8-multiply-24.png" alt="">
+        <img src="./icons8-multiply-24.png" alt="" onclick="crossClose()">
       </div>
       <div class="header">
         <div class="first">
           <label>LOCATION</label>
           <input type="text" id="location" placeholder="Add location" onclick="searchLocation()">
+          <div id="content-1"></div>
         </div>
         <div class="line-1"></div>
         <div class="second" onclick="addGuests()">
           <label>GUESTS</label>
           <input type="text" id="guest" placeholder="Add guests">
+          <div class="content-2"></div>
         </div>
         <div class="line-2"></div>
         <div class="third">

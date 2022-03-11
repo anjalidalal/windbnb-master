@@ -221,6 +221,7 @@ function showData() {
   });
 
 }
+showData()
 
 function searchBoxOpen(){
   const upper = document.querySelector(".upper");  
@@ -229,9 +230,29 @@ function searchBoxOpen(){
   const navBarDiv = document.querySelector(".navbar");
   navBarDiv.style.display = "none"
 }
-showData()
+
+function crossClose(){
+  const upper = document.querySelector(".upper");  
+  upper.style.display = "none";
+  
+  const navBarDiv = document.querySelector(".navbar");
+  navBarDiv.style.display = "unset"
+}
+
 
 const locations = dataArray.map(function (el) {
   return el.city + ", " +  el.country;
 })
 console.log(locations)
+
+function searchLocation(){
+  let locationDiv = document.getElementById("content-1")
+
+  locations.forEach(function(elements){
+    console.log(elements)
+    let p = document.createElement("p");
+    p.textContent = elements;
+
+    locationDiv.appendChild(p)
+  })
+}
