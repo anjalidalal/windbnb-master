@@ -37,20 +37,34 @@
       </div>
     </div> -->
     <div class="upper">
+      <div class="edit">
+        <p>Edit your search</p>
+        <img src="./icons8-multiply-24.png" alt="">
+      </div>
       <div class="header">
         <div class="first">
           <label>LOCATION</label>
           <input type="text" id="location" placeholder="Add location" onclick="searchLocation()">
         </div>
-        <div class="lines"></div>
-        <div class="first">
+        <div class="line-1"></div>
+        <div class="second" onclick="addGuests()">
           <label>GUESTS</label>
           <input type="text" id="guest" placeholder="Add guests">
         </div>
-        <div class="lines"></div>
-        <div class="second">
-        <button><img src="./icons8-search-31.png" alt="">Search</button>
+        <div class="line-2"></div>
+        <div class="third">
+        <button id="btn"><img src="./icons8-search-31.png" alt="">Search</button>
       </div>
+      </div>
+    </div>
+    <div class="navbar" onclick="searchBoxOpen()">
+      <img src="./logo.png" alt="">
+      <div class="box">
+        <input type="text" placeholder="Add location" id="loc">
+        <div></div>
+        <input type="text" placeholder="Add guests" id="gues">
+        <div></div>
+        <button class="btn"><img src="./icons8-search-30.png" alt=""></button>
       </div>
     </div>
     <div class="stays">

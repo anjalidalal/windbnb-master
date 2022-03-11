@@ -160,14 +160,10 @@ localStorage.setItem("details", JSON.stringify(dataArray))
 let data = localStorage.getItem("details")
 
 data = JSON.parse(data)
-console.log(data)
 
 function showData() {
   let datadiv = document.getElementById("bedrooms")
-  let location = document.getElementById("location")
   data.forEach(function (items) {
-    console.log(items.type);
-
     //create one div for full content
     let div = document.createElement("div");
     div.setAttribute("class", "maindiv")
@@ -226,8 +222,16 @@ function showData() {
 
 }
 
-// function searchLocation(){
-//   let div = document.createElement("div");
+function searchBoxOpen(){
+  const upper = document.querySelector(".upper");  
+  upper.style.display = "unset";
   
-// }
+  const navBarDiv = document.querySelector(".navbar");
+  navBarDiv.style.display = "none"
+}
 showData()
+
+const locations = dataArray.map(function (el) {
+  return el.city + ", " +  el.country;
+})
+console.log(locations)
