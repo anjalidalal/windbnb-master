@@ -152,6 +152,12 @@ input:focus {
   line-height: 17px;
   color: #4f4f4f;
 }
+#bedrooms {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 20px;
+  column-gap: 20px;
+}
 /* data section and rooms div */
 .maindiv {
   width: 100%;
@@ -356,7 +362,7 @@ color: #4F4F4F;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
-    row-gap: 20px;
+    row-gap: 40px;
     column-gap: 20px;
   }
   /* data section and rooms div */
