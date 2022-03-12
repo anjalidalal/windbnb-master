@@ -320,6 +320,8 @@ const locations = dataArray.map(function (el) {
   return el.city + ", " +  el.country;
 })
 
+
+const locationValueInput = document.getElementById("location")
 function searchLocation(){
   let locationDiv = document.querySelector(".content-1")
   const topLocations = locations.filter(function(value, index) {
@@ -341,6 +343,8 @@ function searchLocation(){
 
     eachAddress.append(img, p)
     locationDiv.append(eachAddress)
+
+    locationValueInput.value = elements;
   })
 }
 
