@@ -223,13 +223,7 @@ function showData() {
 }
 showData()
 
-function searchBoxOpen(){
-  const upper = document.querySelector(".upper");  
-  upper.style.display = "unset";
-  
-  const navBarDiv = document.querySelector(".navbar");
-  navBarDiv.style.display = "none"
-}
+
 
 function crossClose(){
   const upper = document.querySelector(".upper");  
@@ -239,20 +233,114 @@ function crossClose(){
   navBarDiv.style.display = "unset"
 }
 
+function addLocation() {
+  const content1Div = document.querySelector(".content-1");  
+  content1Div.style.display = "unset";
+
+  const content2Div = document.querySelector(".content-2");  
+  content2Div.style.display = "none";
+}
+
+function addGuests(){
+  const content2Div = document.querySelector(".content-2");  
+  content2Div.style.display = "unset";
+
+  const content1Div = document.querySelector(".content-1");  
+  content1Div.style.display = "none";
+
+}
+
+function searchBoxOpen(){
+  const upper = document.querySelector(".upper");  
+  upper.style.display = "unset";
+  
+  const navBarDiv = document.querySelector(".navbar");
+  navBarDiv.style.display = "none"
+
+}
+
+function closeUpperDiv() {
+  const upper = document.querySelector(".upper");  
+  upper.style.display = "none";
+  
+  const navBarDiv = document.querySelector(".navbar");
+  navBarDiv.style.display = "unset"
+}
+ 
+// age and plus minus section
+let count1 = 0;
+const guestValueInput = document.getElementById("guest")
+let addBtn1 = document.querySelector(".plus1");
+let subtractBtn1 = document.querySelector(".minus1");
+let sum1 = document.getElementById("sum1");
+
+function increment1(){
+  count1++;
+  sum1.textContent = count1;
+  guestValueInput.value = count1 + count2;
+}
+console.log(count1)
+function decrement1(){
+  count1--;
+  sum1.textContent = count1;
+  guestValueInput.value = count1 + count2;
+}
+console.log(count1)
+addBtn1.addEventListener("click", increment1)
+subtractBtn1.addEventListener("click", decrement1)
+
+// age and plus minus section
+let count2 = 0;
+
+let addBtn2 = document.querySelector(".plus2");
+let subtractBtn2 = document.querySelector(".minus2");
+let sum2 = document.getElementById("sum2");
+
+
+function increment2(){
+  count2++;
+  sum2.textContent = count2;
+  guestValueInput.value = count1 + count2;
+}
+console.log(count2)
+function decrement2(){
+  count2--;
+  sum2.textContent = count2;
+  guestValueInput.value = count1 + count2;
+}
+console.log(count2)
+addBtn2.addEventListener("click", increment2)
+subtractBtn2.addEventListener("click", decrement2)
+
+let adult = document.getElementById("adult").value;
+let child = document.getElementById("child").value;
+
 
 const locations = dataArray.map(function (el) {
   return el.city + ", " +  el.country;
 })
-console.log(locations)
 
 function searchLocation(){
-  let locationDiv = document.getElementById("content-1")
+  let locationDiv = document.querySelector(".content-1")
+  const topLocations = locations.filter(function(value, index) {
+    if (index <= 4) {
+      return value;
+    }
+  })
+  topLocations.forEach(function(elements){
+    let eachAddress = document.createElement("div");
+    eachAddress.setAttribute("class", "para")
 
-  locations.forEach(function(elements){
-    console.log(elements)
+    let img = document.createElement("img")
+    img.src = "icons8-location-50.png"
+    img.style.width = "15px";
+    img.style.height = "15px"
+
     let p = document.createElement("p");
     p.textContent = elements;
 
-    locationDiv.appendChild(p)
+    eachAddress.append(img, p)
+    locationDiv.append(eachAddress)
   })
 }
+

@@ -204,7 +204,74 @@ input:focus {
   line-height: 17px;
   margin: 5px 0px;
 }
-
+/* adults and childrens age or plus minus */
+.adultage, 
+.childage{
+  width: 114px;
+  height: 36px;
+  font-family: 'Mulish';
+  font-weight: 700;
+  font-size: 10px;
+  color: #333333;
+}
+.adultage > label, 
+.childage > label{
+  font-size: 12px;
+}
+#adult,
+#child{
+  border: none;
+  font-size: 14px;
+}
+.age{
+  display: flex;
+  gap: 12px;
+  margin: 12px 0px;
+  font-size: 12px;
+  align-items: center;
+}
+.plus1,
+.minus1,
+.plus2,
+.minus2{
+  width: 18px;
+  height: 18px;
+  border: 1px solid #828282;
+  color: #828282;
+  border-radius: 4px;
+}
+.children{
+  margin-top: 40px;
+}
+.content-1{
+  width: 252px;
+  height: 270px;
+  padding: 0px 20px;
+  position: absolute;
+  top: 200px;
+  left: 25px;
+  display: none;
+}
+.content-2{
+  width: 252px;
+  height: 270px;
+  margin: 20px 3px;
+  position: absolute;
+  top: 190px;
+  left: 28px;
+  display: none;
+}
+.para{
+  font-family: 'Mulish';
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 20px 0px;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #4F4F4F;
+}
 @media (min-width: 768px) {
   /* upper section */
   .main {
@@ -223,7 +290,7 @@ input:focus {
     width: 297px;
     height: 55px;
     background: #ffffff;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.274);
     border-radius: 16px;
   }
   /* display none div or header section */
@@ -290,7 +357,7 @@ input:focus {
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     row-gap: 20px;
-    column-gap: 15px;
+    column-gap: 20px;
   }
   /* data section and rooms div */
   .maindiv {
@@ -335,20 +402,20 @@ input:focus {
     font-size: 16px;
     line-height: 20px;
   }
-  #content-1{
-    background-color: #33333300;
+  .content-1{
     width: 252px;
     height: 270px;
     padding: 0px 20px;
     position: absolute;
     top: 65px;
     left: 0px;
+    display: none;
   }
   .content-2{
-    background-color: #33333300;
+    display: none;
     width: 252px;
     height: 270px;
-    padding: 20px;
+    margin: 20px 3px;
     position: absolute;
     top: 65px;
     left: 255px;

@@ -42,20 +42,43 @@
         <img src="./icons8-multiply-24.png" alt="" onclick="crossClose()">
       </div>
       <div class="header">
-        <div class="first">
+        <div class="first" onclick="addLocation()">
           <label>LOCATION</label>
           <input type="text" id="location" placeholder="Add location" onclick="searchLocation()">
-          <div id="content-1"></div>
+          <div class="content-1"></div>
         </div>
         <div class="line-1"></div>
         <div class="second" onclick="addGuests()">
           <label>GUESTS</label>
           <input type="text" id="guest" placeholder="Add guests">
-          <div class="content-2"></div>
+          <div class="content-2">
+            <div class="adults">
+              <div class="adultage">
+                <label>Adults</label>
+                <input type="text" placeholder="Ages 13 or above" id="adult">
+              </div>
+              <div class="age">
+                <button class="plus1">+</button>
+                <p id="sum1">0</p>
+                <button class="minus1">-</button>
+              </div>
+            </div>
+            <div class="children">
+            <div class="childage">
+              <label>Children</label>
+              <input type="text" placeholder="Ages 2-12" id="child">
+            </div>
+            <div class="age">
+              <button class="plus2">+</button>
+                <p id="sum2">0</p>
+                <button class="minus2">-</button>
+            </div>
+            </div>
+          </div>
         </div>
         <div class="line-2"></div>
         <div class="third">
-        <button id="btn"><img src="./icons8-search-31.png" alt="">Search</button>
+        <button id="btn" onclick="closeUpperDiv()"><img src="./icons8-search-31.png" alt="">Search</button>
       </div>
       </div>
     </div>
